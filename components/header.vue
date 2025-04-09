@@ -20,8 +20,10 @@ header {
   grid-template-columns: min-content 1fr min-content;
   padding: 12px 20px;
   gap: 1rem;
-  //min-height: 32px;
+  position: sticky;
+  top: 0;
   align-content: center;
+  background: #fff;
 }
 
 .fake-input {

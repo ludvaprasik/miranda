@@ -1,29 +1,5 @@
 <template>
   <nav>
-<!--    <nuxt-link to="/" class="nav-link" exact-active-class="active">
-      <NavButton>
-        <HomeIcon />
-        <strong>Domov</strong>
-      </NavButton>
-    </nuxt-link>
-    <nuxt-link class="nav-link" to="/donate" exact-active-class="active">
-      <NavButton @mouseenter="">
-        <HeartIcon />
-        <strong>Prispieť</strong>
-      </NavButton>
-    </nuxt-link>
-    <nuxt-link class="nav-link" to="/wanderers" exact-active-class="active">
-      <NavButton>
-        <HomeIcon />
-        <strong>Tuláčikovia</strong>
-      </NavButton>
-    </nuxt-link>
-    <nuxt-link class="nav-link" to="/menu" exact-active-class="active">
-      <NavButton>
-        <HomeIcon />
-        <strong>Menu</strong>
-      </NavButton>
-    </nuxt-link>-->
     <NavItem
         to="/"
         label="Domov"
@@ -73,6 +49,7 @@ nav {
   border-radius: 24px 24px 0 0;
   overflow: clip;
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+  background: #fff;
 }
 
 .nav-link {

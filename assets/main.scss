@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import 'variables';
+@import 'forms';
 
 #__nuxt {
   height: 100%;
@@ -12,7 +13,7 @@ body {
   touch-action: manipulation;
 }
 
-h2, h3 {
+h2, h3, h4 {
   color: $accent;
   text-align: center;
 }
@@ -39,10 +40,48 @@ strong {
 .btn {
   border: 0;
   outline: 0;
+  cursor: pointer;
+  background: transparent;
+  max-width: 585px;
+  display: block;
+  margin: 0 auto;
+  &.btn--action {
+    width: 100%;
+    font-weight: 600;
+    background: $action-color;
+    border-radius: 24px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    color: #fff;
+    &.secondary {
+      border: 2px solid $secondary;
+      background: none;
+      color: $accent
+    }
+    &:hover, &:active, &:focus {
+      filter: brightness(0.8);
+    }
+  }
+  &.btn-tab {
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    &.active {
+      background: $bg-hover;
+    }
+  }
+  &:focus {
+    --webkit-tap-highlight-color: transparent;
+  }
 }
 
 .section {
-  background: $bg-hover;
   border-radius: 16px;
   padding: 20px;
+  &.section-bg {
+    background: $bg-hover;
+  }
 }
