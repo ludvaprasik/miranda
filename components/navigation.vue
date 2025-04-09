@@ -30,13 +30,13 @@
 <script setup lang="ts">
 import HomeIcon from "~/components/icons/home-icon.vue";
 import HeartIcon from "~/components/icons/heart-icon.vue";
-import NavItem from "~/components/NavItem.vue";
+import NavItem from "~/components/inputs/NavItem.vue";
 import HeartIconFilled from "~/components/icons/heart-icon-filled.vue";
 import HomeIconFilled from "~/components/icons/home-icon-filled.vue";
 import PawIcon from "~/components/icons/paw-icon.vue";
 import PawIconFilled from "~/components/icons/paw-icon-filled.vue";
 import MenuIcon from "~/components/icons/MenuIcon.vue";
-
+// zatim jsem neprisel na zpusob, jak se obejit bez importu tady nebo globalne
 </script>
 
 <style lang="scss" scoped>

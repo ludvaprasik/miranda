@@ -22,7 +22,6 @@ export default defineNuxtConfig({
     }
   },
   alias: {
-    //'images': fileURLToPath(new URL('./assets/images', import.meta.url)),
     'assets': fileURLToPath(new URL('./assets', import.meta.url)),
   },
   app: {
@@ -40,5 +39,15 @@ export default defineNuxtConfig({
         { textContent: 'JavaScript is required' }
       ]
     }
-  }
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/icons',
+      pathPrefix: false,
+    },
+  ],
 })

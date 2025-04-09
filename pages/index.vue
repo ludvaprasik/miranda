@@ -25,7 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import PawsIcon from "~/components/icons/paws-icon.vue"
 
 const doggoList = [
   { img: 'certik-thumb.png', name: 'Daisy', age: 'Pubertak', gender: 'Dievča' },

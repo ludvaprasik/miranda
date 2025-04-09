@@ -39,7 +39,6 @@
 </template>
 
 <script lang="ts" setup>
-import MirandaLogo from "~/components/icons/miranda-logo.vue";
 definePageMeta({
   title: 'Welcome to Miranda App',
   layout: "welcome"

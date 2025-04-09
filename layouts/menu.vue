@@ -9,16 +9,12 @@
     </div>
     <NavButton @click="goToPrev()" class="menu-footer__button">
       <CloseIcon />
-      <strong>Zavřít</strong>
+      <span>Zavřít</span>
     </NavButton>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {useRouter} from "#app";
-import CloseIcon from "~/components/icons/close-icon.vue";
-import HouseIcon from "~/components/icons/house-icon.vue";
-
 const router = useRouter()
 const goToPrev = () => {
   router.go(-1);

@@ -1,8 +1,8 @@
 <template>
   <Header />
-  <button @click="goToPrev()">
+  <button @click="goToPrev()" class="btn">
     <ArrowLeftIcon />
-    <strong>Zavřít</strong>
+    <strong>Späť</strong>
   </button>
   <slot />
 </template>

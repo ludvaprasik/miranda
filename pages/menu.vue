@@ -32,13 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import FaqIcon from "~/components/icons/faq-icon.vue";
-import DogIcon from "~/components/icons/dog-icon.vue";
-import ChevronIcon from "~/components/icons/chevron-icon.vue";
-import HeartIcon from "~/components/icons/heart-icon.vue";
-import DogAdoptedIcon from "~/components/icons/dog-adopted-icon.vue";
-import ContactIcon from "~/components/icons/contact-icon.vue";
-
 definePageMeta({
   title: 'Miranda Demo Menu',
   layout: 'menu',
