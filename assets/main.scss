@@ -1,0 +1,48 @@
+@import 'normalize.css';
+@import 'variables';
+
+#__nuxt {
+  height: 100%;
+}
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  touch-action: manipulation;
+}
+
+h2, h3 {
+  color: $accent;
+  text-align: center;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+strong {
+  color: $fg-lighter;
+}
+
+.btn-nav {
+  background: $bg-light;
+  &:hover, &.active {
+    background-color: $bg-hover;
+  }
+  span {
+    color: $accent;
+    font-weight: 600;
+  }
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+}
+
+.section {
+  background: $bg-hover;
+  border-radius: 16px;
+  padding: 20px;
+}
