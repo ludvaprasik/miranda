@@ -151,7 +151,7 @@ onBeforeUnmount(() => {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  border: 2px solid #F9C45A;
+  border: 2px solid $secondary;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,8 +160,8 @@ onBeforeUnmount(() => {
 
 .carousel-page-button.active {
   width: 24px;
-  background: #794389;
-  border-color: #794389;
+  background: $accent;
+  border-color: $accent;
 }
 
 .carousel-control:disabled {

@@ -2,6 +2,7 @@
   <header>
     <MirandaLogo />
     <div class="fake-input">
+      {{ auth.isLoggedIn }}
       <EditIcon />
       Kontaktujte nás
     </div>
@@ -9,9 +10,9 @@
   </header>
 </template>
 <script setup lang="ts">
-import MirandaLogo from "~/components/icons/miranda-logo.vue";
-import EditIcon from "~/components/icons/edit-icon.vue";
-import AvatarIcon from "~/components/icons/avatar-icon.vue";
+const auth = useAuth()
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -27,7 +28,7 @@ header {
 }
 
 .fake-input {
-  background: #F5EEF7;
+  background: $bg-hover;
   border-radius: 6px;
   display: flex;
   align-items: center;

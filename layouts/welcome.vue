@@ -5,12 +5,11 @@
 </template>
 
 <script lang="ts" setup>
-
 </script>
 
 <style lang="scss" scoped>
 .welcome__container {
-  background: #EEE4F2;
+  background: $bg-carousel;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
