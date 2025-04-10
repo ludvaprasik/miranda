@@ -4,7 +4,7 @@ import {fileURLToPath} from "mlly";
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', 'vue3-carousel-nuxt'],
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image'],
   css: ['~/assets/main.scss'],
   vite: {
     css: {

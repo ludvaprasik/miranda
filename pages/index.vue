@@ -7,7 +7,11 @@
 
     <div class="section section-bg">
       <h2>Nové videa</h2>
-      <!-- <Carousel /> -->
+
+      <div class="carousel-wrapper">
+        <Carousel :slides="slides" :slidesPerPage="2" :autoplay="5000" :arrows="false" />
+      </div>
+
       <button class="btn btn--action">Viac videí</button>
     </div>
 
@@ -25,7 +29,16 @@
 </template>
 
 <script setup lang="ts">
-
+const slides = ref([
+  { image: 'dogo1.png' },
+  { image: 'dogo2.png' },
+  { image: 'dogo3.png' },
+  { image: 'dogo4.png' },
+  { image: 'dogo1.png' },
+  { image: 'dogo2.png' },
+  { image: 'dogo3.png' },
+  { image: 'dogo4.png' }
+]);
 const doggoList = [
   { img: 'certik-thumb.png', name: 'Daisy', age: 'Pubertak', gender: 'Dievča' },
   { img: 'vorisek-thumb.png', name: 'Rudy', age: 'Pubertak', gender: 'Chalan' },
