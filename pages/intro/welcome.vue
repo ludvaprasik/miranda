@@ -2,7 +2,6 @@
   <div class="welcome-page">
     <button @click="$router.push('/intro/intro')" class="btn btn--intro"><ArrowLeft /></button>
     <img src="../../public/img/intro4.png" alt="qr"/>
-
     <div class="cta">
       <button class="btn btn--action mt-4 mb-2" @click="$router.push('/intro/login')">Prihlásiť SE</button>
       <button class="btn btn--action secondary mb-4" @click="$router.push('/intro/register')">Registrovať sa</button>
@@ -25,6 +24,7 @@ img {
 
 .cta {
   padding: 0 2rem;
+  margin-top: 6rem;
 }
 
 .btn--intro {

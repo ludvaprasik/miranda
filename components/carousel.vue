@@ -48,6 +48,9 @@ const props = defineProps({
     default: true
   }
 });
+
+const emit = defineEmits(['pageChange']);
+
 const currentPage = ref(1);
 let autoplayInterval: number | null = null;
 
@@ -78,6 +81,7 @@ const clearAutoplayInterval = () => {
 const goToPage = (page: number) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;
+    emit('pageChange', currentPage.value);
   }
 };
 
@@ -87,13 +91,23 @@ const nextPage = () => {
   } else {
     currentPage.value = 1;
   }
+  emit('pageChange', currentPage.value);
 };
 
 const prevPage = () => {
   if (currentPage.value > 1) {
     currentPage.value--;
   }
+  emit('pageChange', currentPage.value);
 };
+
+defineExpose({
+  nextPage,
+  prevPage,
+  goToPage,
+  totalPages,
+  getCurrentPage: () => currentPage.value
+});
 
 onMounted(() => {
   if (props.autoplay > 0) {
@@ -147,7 +161,7 @@ onBeforeUnmount(() => {
 }
 
 .carousel-text {
-  padding: 2rem 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .carousel-pagination {
