@@ -6,34 +6,18 @@
   <div class="blank">
     <img src="~/assets/img/separator-clouds.svg" alt="separator" class="mt-4"/>
   </div>
-  <div class="registration-container">
-    <h1>Registrácia</h1>
+  <div class="reset-container">
+    <h1>Resetovat heslo</h1>
     <form @submit.prevent="validateAndPushToHP">
-      <div class="form__group">
-        <label for="name">Meno</label>
-        <input id="name" type="text" v-model="name" />
-      </div>
       <div class="form__group">
         <label for="mail">E-mailová adresa</label>
         <input id="mail" type="text" v-model="mail" />
       </div>
-      <div class="form__group">
-        <label for="pass">Heslo</label>
-        <InputPassword id="pass" v-model="password" />
-      </div>
-      <div class="form__group">
-        <label for="passR">Zopakovat heslo</label>
-        <InputPassword id="passR" v-model="passwordRepeat" />
-      </div>
-      <button class="btn btn--action mt-4">
-        Vytvoriť účet
+      <p>Zadajte prosím váš email, aby sme vám poslali odkaz na resetovanie hesla</p>
+      <button class="btn btn--action">
+        Pokračovať
       </button>
     </form>
-
-    <div class="newsletter">
-      <InputCheckbox v-model="check" />
-      <p>Chcem odoberať newsletter a dostávať najnovšie správy z Demo Day Aplikaci e-mailom</p>
-    </div>
   </div>
 </template>
 
@@ -69,13 +53,9 @@ const validateAndPushToHP = () => {
   display: flex;
   align-items: flex-end;
 }
-.registration-container {
+.reset-container {
   background: #fff;
   padding: 2rem;
-}
-
-.reset-password {
-  margin-top: 4rem;
 }
 
 h1 {
@@ -118,5 +98,8 @@ svg {
     height: 12px;
     width: auto;
   }
+}
+.btn--action {
+  margin-top: 100px
 }
 </style>

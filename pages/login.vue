@@ -20,7 +20,7 @@
         <InputPassword id="pass" v-model="password" />
       </div>
 
-      <strong class="fg--accent mb-1">Nezapamätali ste si heslo?</strong>
+      <strong class="fg--accent mb-1" @click="$router.push('/reset')">Nezapamätali ste si heslo?</strong>
       <button type="submit"
               class="btn btn--action"
               :disabled="!inputIsValid"
@@ -30,14 +30,9 @@
     </form>
 
     <strong class="fg--accent mb-1 reset-password">Ešte u nás nemáte účet?</strong>
-    <button class="btn btn--action secondary">
+    <button class="btn btn--action secondary" @click="$router.push('/register')">
       Registrovať sa
     </button>
-
-    <div class="newsletter">
-      <InputCheckbox v-model="check" />
-      <p>Chcem odoberať newsletter a dostávať najnovšie správy z Demo Day Aplikaci e-mailom</p>
-    </div>
   </div>
 </template>
 
@@ -110,12 +105,5 @@ img {
 svg {
   width: 64px;
   height: 64px;
-}
-
-.newsletter {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: .5rem;
-  align-items: center;
 }
 </style>

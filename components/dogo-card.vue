@@ -18,8 +18,6 @@
 </template>
 
 <script lang="ts" setup>
-import MoreIcon from "~/components/icons/more-icon.vue";
-import DogsIcon from "~/components/icons/dogs-icon.vue";
 
 const props = defineProps({
   dog: {

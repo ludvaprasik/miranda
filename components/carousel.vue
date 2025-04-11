@@ -3,7 +3,7 @@
     <div class="carousel-slides-container">
       <div class="carousel-slides">
         <div v-for="(slide, index) in slidesToShow" :key="`slide-${currentPage}-${index}`" class="carousel-slide"   :style="{ '--slides-per-page': props.slidesPerPage }">
-          <img  :src="`_nuxt/assets/img/${slide.image}`" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
+          <img v-if="slide.image" :src="getImageUrl(slide.image)" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
           <div v-if="slide.title" class="carousel-caption">{{ slide.title }}</div>
           <div v-if="slide.message" class="carousel-message">{{ slide.message }}</div>
         </div>
@@ -56,6 +56,15 @@ const slidesToShow = computed(() => {
   const startIndex = (currentPage.value - 1) * props.slidesPerPage;
   return props.slides.slice(startIndex, startIndex + props.slidesPerPage);
 });
+
+const getImageUrl = (name: string) => {
+  try {
+    return new URL(`/assets/img/${name}`, import.meta.url).href
+  } catch (e) {
+    console.error('Nepodarilo se nacist pejskuv obrazek')
+    return ''
+  }
+}
 
 const clearAutoplayInterval = () => {
   if (autoplayInterval) {

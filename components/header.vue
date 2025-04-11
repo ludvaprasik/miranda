@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :style="headerStyle">
     <MirandaLogo />
     <div class="fake-input">
       <EditIcon />
@@ -10,7 +10,22 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps({
+  bg: {
+    type: Boolean,
+    default: true
+  }
+})
 
+// hodne nesikovne, ale rychlejsi provedeni, nez automagicky pres styly kontejneru
+const headerStyle = computed(() => {
+  if (props.bg) {
+    return { background: '#fff' }
+  } else {
+    console.log('eeedd')
+    return { background: '#EEE4F2' }
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -22,7 +37,6 @@ header {
   position: sticky;
   top: 0;
   align-content: center;
-  background: #fff;
 }
 
 .fake-input {
