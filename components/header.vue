@@ -5,7 +5,7 @@
       <EditIcon />
       Kontaktujte nás
     </div>
-    <AvatarIcon />
+    <AvatarIcon @click="$router.push('/user-profile')" style="cursor: pointer;" />
   </header>
 </template>
 

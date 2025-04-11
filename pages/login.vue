@@ -17,14 +17,10 @@
       </div>
       <div class="form__group">
         <label for="pass">Heslo</label>
-        <input id="pass" :type="passwordShown" v-model="password" />
+        <InputPassword id="pass" v-model="password" />
       </div>
 
-      <!--{{ inputIsValid }}
-      <button class="btn" @click="showPassword = !showPassword">
-        Show pass
-      </button>-->
-      <p>Nezapamätali ste si heslo?</p>
+      <strong class="fg--accent mb-1">Nezapamätali ste si heslo?</strong>
       <button type="submit"
               class="btn btn--action"
               :disabled="!inputIsValid"
@@ -33,10 +29,15 @@
       </button>
     </form>
 
-    <p class="reset-password">Ešte u nás nemáte účet?</p>
+    <strong class="fg--accent mb-1 reset-password">Ešte u nás nemáte účet?</strong>
     <button class="btn btn--action secondary">
       Registrovať sa
     </button>
+
+    <div class="newsletter">
+      <InputCheckbox v-model="check" />
+      <p>Chcem odoberať newsletter a dostávať najnovšie správy z Demo Day Aplikaci e-mailom</p>
+    </div>
   </div>
 </template>
 
@@ -50,6 +51,7 @@ const auth = useAuth()
 const name = ref('');
 const password = ref('');
 const showPassword = ref(false)
+const check = ref(false)
 const inputIsValid = computed(() => {
   return name.value.length > 3 && password.value.length > 3;
 });
@@ -83,12 +85,21 @@ const validateAndPushToHP = () => {
 }
 
 .reset-password {
-  text-align: center;
   margin-top: 4rem;
 }
 
 h1 {
   text-align: center;
+}
+
+strong {
+  display: block;
+}
+
+label {
+  color: $accent;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 img {
@@ -99,5 +110,12 @@ img {
 svg {
   width: 64px;
   height: 64px;
+}
+
+.newsletter {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: .5rem;
+  align-items: center;
 }
 </style>

@@ -1,12 +1,6 @@
 <template>
   <slot />
   <div class="menu-footer">
-    <div class="menu-footer__contact">
-      <h3>
-        <HouseIcon />
-        Chcete nás navštívit?
-      </h3>
-    </div>
     <NavButton @click="goToPrev()" class="menu-footer__button">
       <CloseIcon />
       <span>Zavřít</span>

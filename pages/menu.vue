@@ -29,6 +29,12 @@
       </li>
     </ul>
   </div>
+  <div class="menu-footer__contact">
+    <h3>
+      <HouseIcon />
+      Chcete nás navštívit?
+    </h3>
+  </div>
 </template>
 
 <script setup lang="ts">
