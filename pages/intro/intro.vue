@@ -17,7 +17,6 @@ const slides = [
   {image: 'intro1.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
   {image: 'intro2.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
   {image: 'intro3.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
-  {image: 'intro4.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
 ]
 </script>
 

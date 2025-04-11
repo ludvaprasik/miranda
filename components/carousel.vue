@@ -61,7 +61,7 @@ const slidesToShow = computed(() => {
 
 const getImageUrl = (name: string) => {
   try {
-    return new URL(`/assets/img/${name}`, import.meta.url).href
+    return `/img/${name}`
   } catch (e) {
     console.error('Nepodarilo se nacist pejskuv obrazek')
     return ''
@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
 .carousel-message {
   text-align: center;
   font-size: 18px;
-  padding: 0 6rem;
+  padding: 0 3rem;
 }
 
 .carousel-text {

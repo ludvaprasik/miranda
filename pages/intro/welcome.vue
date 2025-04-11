@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-page">
     <button @click="$router.push('/intro/intro')" class="btn btn--intro"><ArrowLeft /></button>
-    <img src="~/assets/img/intro4.png"  alt="qr"/>
+    <img src="../../public/img/intro4.png" alt="qr"/>
 
     <div class="cta">
       <button class="btn btn--action mt-4 mb-2" @click="$router.push('/intro/login')">Prihlásiť SE</button>
