@@ -21,8 +21,8 @@ definePageMeta({
 const carouselRef = ref(null);
 const slides = [
   {image: 'intro1.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
-  {image: 'intro2.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
-  {image: 'intro3.png', title: 'Nájdite svojho maznáčika priamo v našej aplikácii', message: 'Objavte svojho štvornohého kamaráta počas chvíľky'},
+  {image: 'intro2.png', title: 'Nová videa ze zákulisí', message: 'Vaša pomoc prináša zvieratám šancu na lepší život'},
+  {image: 'intro3.png', title: 'Virtuálna adopcia zvierat na pár kliknutí', message: 'Staňte sa súčasťou zmeny a zachráňte zvieracie životy'},
 ]
 const currentSlide = ref(1)
 const prevSlide = () => {

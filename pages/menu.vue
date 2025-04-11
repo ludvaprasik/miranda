@@ -28,12 +28,15 @@
         <ChevronIcon />
       </li>
     </ul>
-  </div>
-  <div class="menu-footer__contact">
-    <h3>
-      <HouseIcon />
-      Chcete nás navštívit?
-    </h3>
+    <div class="menu-footer__contact">
+      <h2>
+        <HouseIcon />
+        Chcete nás navštívit?
+      </h2>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Otevřeno | Po–Ne 10:00 – 15:00</p>
+      <button class="btn btn--base"><DogHead />Osobný účet</button>
+    </div>
   </div>
 </template>
 
@@ -52,10 +55,9 @@ h2 {
 }
 .menu-full {
   padding: 0 1rem;
-  //display: grid;
-  //grid-template-rows: min-content 1fr auto;
-  //min-height: 100%;
-  //min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr auto;
+  min-height: 100%;
 }
 ul {
   padding: 0;
@@ -80,5 +82,32 @@ li {
   &:hover {
     background: rgba(0,0,0,.02);
   }
+}
+
+.btn--base {
+  display: flex;
+  align-items: center;
+  border: 1px solid #EFEBFA;
+  padding: 8px;
+  border-radius: 6px;
+  gap: .5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.menu-footer__contact {
+  h2 {
+    text-align: left;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    font-size: 18px;
+  }
+  p {
+    margin: .5rem 0;
+    color: #373338CC;
+    font-weight: 600;
+  }
+  padding: 1rem 1rem 80px 1rem;
 }
 </style>

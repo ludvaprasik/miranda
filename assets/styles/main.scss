@@ -141,8 +141,10 @@ strong {
 }
 
 .intro-page .carousel-slides {
-  height: 500px;
   height: 100%;
+  .carousel-text {
+    min-height: 190px;
+  }
   img {
     height: auto;
     width: 100%;

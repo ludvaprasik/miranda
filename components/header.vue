@@ -37,6 +37,7 @@ header {
   position: sticky;
   top: 0;
   align-content: center;
+  z-index: 10;
 }
 
 .fake-input {
