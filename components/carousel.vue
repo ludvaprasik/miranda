@@ -4,8 +4,10 @@
       <div class="carousel-slides">
         <div v-for="(slide, index) in slidesToShow" :key="`slide-${currentPage}-${index}`" class="carousel-slide"   :style="{ '--slides-per-page': props.slidesPerPage }">
           <img v-if="slide.image" :src="getImageUrl(slide.image)" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
-          <div v-if="slide.title" class="carousel-caption">{{ slide.title }}</div>
-          <div v-if="slide.message" class="carousel-message">{{ slide.message }}</div>
+          <div class="carousel-text">
+            <h1 v-if="slide.title" class="carousel-caption">{{ slide.title }}</h1>
+            <p v-if="slide.message" class="carousel-message">{{ slide.message }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -138,13 +140,14 @@ onBeforeUnmount(() => {
   border-radius: $border-radius;
 }
 
-.carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0.5rem;
-  right: 0.5rem;
-  padding: 0.5rem;
+.carousel-message {
   text-align: center;
+  font-size: 18px;
+  padding: 0 6rem;
+}
+
+.carousel-text {
+  padding: 2rem 2rem 0 2rem;
 }
 
 .carousel-pagination {

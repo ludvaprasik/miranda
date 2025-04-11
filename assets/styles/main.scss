@@ -139,3 +139,12 @@ strong {
 .bg--accent {
   background: $accent;
 }
+
+.intro-page .carousel-slides {
+  height: 500px;
+  height: 100%;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}

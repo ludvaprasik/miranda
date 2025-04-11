@@ -4,7 +4,7 @@
     <strong>Späť</strong>
   </button>
   <div class="blank">
-    <img src="~/assets/img/separator-clouds.svg" alt="separator" class="mt-4"/>
+    <img src="../../assets/img/separator-clouds.svg" alt="separator" class="mt-4"/>
   </div>
   <div class="reset-container">
     <h1>Resetovat heslo</h1>

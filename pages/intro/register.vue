@@ -4,7 +4,7 @@
     <strong>Späť</strong>
   </button>
   <div class="blank">
-    <img src="~/assets/img/separator-clouds.svg" alt="separator" class="mt-4"/>
+    <img src="../../assets/img/separator-clouds.svg" alt="separator" class="mt-4"/>
   </div>
   <div class="registration-container">
     <h1>Registrácia</h1>

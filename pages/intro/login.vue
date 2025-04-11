@@ -5,7 +5,7 @@
   </div>
 
 
-  <img src="~/assets/img/separator-clouds.svg" />
+  <img src="../../assets/img/separator-clouds.svg" />
 
   <div class="registration-container">
     <h1>Prihlásenie</h1>
