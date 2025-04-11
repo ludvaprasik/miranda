@@ -10,26 +10,28 @@
   <div class="registration-container">
     <h1>Prihlásenie</h1>
 
-    <div class="form__group">
-      <label for="name">E-mailová adresa</label>
-      <input id="name" type="text" v-model="name" />
-    </div>
-    <div class="form__group">
-      <label for="pass">Heslo</label>
-      <input id="pass" :type="passwordShown" v-model="password" />
-    </div>
+    <form @submit.prevent="validateAndPushToHP">
+      <div class="form__group">
+        <label for="name">E-mailová adresa</label>
+        <input id="name" type="text" v-model="name" />
+      </div>
+      <div class="form__group">
+        <label for="pass">Heslo</label>
+        <input id="pass" :type="passwordShown" v-model="password" />
+      </div>
 
-    {{ inputIsValid }}
-    <button class="btn" @click="showPassword = !showPassword">
-      Show pass
-    </button>
-    <p>Nezapamätali ste si heslo?</p>
-    <button type="submit"
-            class="btn btn--action"
-            :disabled="!inputIsValid"
-            @click="validateAndPushToHP">
-      Prihlásiť sa
-    </button>
+      <!--{{ inputIsValid }}
+      <button class="btn" @click="showPassword = !showPassword">
+        Show pass
+      </button>-->
+      <p>Nezapamätali ste si heslo?</p>
+      <button type="submit"
+              class="btn btn--action"
+              :disabled="!inputIsValid"
+              @click="validateAndPushToHP">
+        Prihlásiť sa
+      </button>
+    </form>
 
     <p class="reset-password">Ešte u nás nemáte účet?</p>
     <button class="btn btn--action secondary">

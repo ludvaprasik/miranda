@@ -5,12 +5,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image'],
-  css: ['~/assets/main.scss'],
+  css: ['~/assets/styles/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/variables.scss";'
+          additionalData: '@import "@/assets/styles/variables.scss";'
         },
       },
     },

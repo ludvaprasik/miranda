@@ -2,16 +2,14 @@
   <header>
     <MirandaLogo />
     <div class="fake-input">
-      {{ auth.isLoggedIn }}
       <EditIcon />
       Kontaktujte nás
     </div>
     <AvatarIcon />
   </header>
 </template>
-<script setup lang="ts">
-const auth = useAuth()
 
+<script setup lang="ts">
 
 </script>
 
@@ -28,7 +26,7 @@ header {
 }
 
 .fake-input {
-  background: $bg-hover;
+  background: $bg-dark;
   border-radius: 6px;
   display: flex;
   align-items: center;

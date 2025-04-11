@@ -28,8 +28,6 @@
 </template>
 
 <script setup lang="ts">
-import ArrowRight from "~/components/icons/arrow-right.vue";
-
 const selectedTab = ref('dogs')
 const currentPage = ref(1)
 const pageSize = 12
@@ -77,16 +75,5 @@ h1 {
 
 .wanderers {
   padding: 0 1rem 80px 1rem;
-}
-
-.tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 1rem;
-  justify-content: stretch;
-  .btn-tab {
-    display: flex;
-    width: 100%;
-  }
 }
 </style>

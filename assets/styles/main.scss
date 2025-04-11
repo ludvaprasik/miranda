@@ -1,5 +1,6 @@
 @import 'normalize.css';
-//@import 'variables';
+@import 'variables';
+@import 'typo';
 @import 'forms';
 
 #__nuxt {
@@ -13,13 +14,8 @@ body {
   touch-action: manipulation;
 }
 
-h2, h3, h4 {
-  color: $accent;
-  text-align: center;
-}
-
-h3 {
-  font-size: 14px;
+.inverse {
+  color: #fff;
 }
 
 strong {
@@ -29,7 +25,7 @@ strong {
 .btn-nav {
   background: $bg-light;
   &:hover, &.active {
-    background-color: $bg-hover;
+    background-color: $bg-dark;
   }
   span {
     color: $accent;
@@ -42,17 +38,23 @@ strong {
   outline: 0;
   cursor: pointer;
   background: transparent;
-  max-width: 585px;
   display: block;
   margin: 0 auto;
   &.btn--action {
     width: 100%;
     font-weight: 600;
+    font-size: 14px;
     background: $action-color;
     border-radius: 24px;
     padding: 8px 16px;
     text-transform: uppercase;
     color: #fff;
+    &.btn--sm {
+      padding: 8px 12px;
+      font-size: 11px;
+      width: auto;
+      margin: 0;
+    }
     &.secondary {
       border: 2px solid $secondary;
       background: none;
@@ -63,14 +65,15 @@ strong {
     }
   }
   &.btn-tab {
-    border-radius: 8px;
+    border-radius: $border-radius;
     padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    background: #fff;
     &.active {
-      background: $bg-hover;
+      background: $bg-dark;
     }
   }
   &:focus {
@@ -79,9 +82,32 @@ strong {
 }
 
 .section {
-  border-radius: 16px;
+  border-radius: $border-radius-md;
+  margin: 2rem 0;
   padding: 20px;
   &.section-bg {
-    background: $bg-hover;
+    background: $bg-dark;
   }
+  &.section-bg--gradient {
+    background: linear-gradient(90deg,rgba(239, 188, 213, 1) 0%, rgba(248, 183, 215, 1) 100%);
+  }
+  &.section-bg-darker {
+    background: $bg-darker;
+    margin-bottom: 0;
+  }
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
+  justify-content: stretch;
+  .btn-tab {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }

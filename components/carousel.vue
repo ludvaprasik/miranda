@@ -2,7 +2,7 @@
   <div class="carousel-container">
     <div class="carousel-slides-container">
       <div class="carousel-slides">
-        <div v-for="(slide, index) in slidesToShow" :key="`slide-${currentPage}-${index}`" class="carousel-slide" :style="{ width: `${100 / props.slidesPerPage}%` }">
+        <div v-for="(slide, index) in slidesToShow" :key="`slide-${currentPage}-${index}`" class="carousel-slide"   :style="{ '--slides-per-page': props.slidesPerPage }">
           <img :src="'_nuxt/assets/img/' + slide.image" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
           <div v-if="slide.title" class="carousel-caption">{{ slide.title }}</div>
           <div v-if="slide.message" class="carousel-message">{{ slide.message }}</div>
@@ -25,11 +25,13 @@
 </template>
 
 <script lang="ts" setup>
+import type { Slide } from "~/config/interfaces";
+import type { PropType } from 'vue'
+
 const props = defineProps({
   slides: {
-    type: Array,
-    required: true,
-    default: []
+    type: Array as PropType<Slide[]>,
+    required: true
   },
   slidesPerPage: {
     type: Number,
@@ -45,7 +47,7 @@ const props = defineProps({
   }
 });
 const currentPage = ref(1);
-let autoplayInterval = null;
+let autoplayInterval: number | null = null;
 
 const totalPages = computed(() => {
   return Math.max(1, Math.ceil(props.slides.length / props.slidesPerPage));
@@ -62,7 +64,7 @@ const clearAutoplayInterval = () => {
   }
 };
 
-const goToPage = (page) => {
+const goToPage = (page: number) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;
   }
@@ -109,13 +111,14 @@ onBeforeUnmount(() => {
 
 .carousel-slides {
   display: flex;
+  transition: transform 0.3s ease-in-out;
   width: 100%;
+  gap: 1rem;
 }
 
 .carousel-slide {
-  flex-shrink: 0;
-  padding: 0 0.5rem;
   position: relative;
+  flex: 0 0 calc((100% - (1rem * (var(--slides-per-page) - 1))) / var(--slides-per-page));
 }
 
 .carousel-image {
@@ -123,7 +126,7 @@ onBeforeUnmount(() => {
   height: 288px;
   display: block;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: $border-radius;
 }
 
 .carousel-caption {

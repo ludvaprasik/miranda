@@ -1,0 +1,19 @@
+h2, h3, h4 {
+  color: $accent;
+  text-align: center;
+  &.inverse {
+    color: #fff;
+  }
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+}
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  margin: .5rem 0;
+  text-align: left;
+}
