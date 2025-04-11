@@ -15,7 +15,7 @@
         <li><RulesIcon/> Podmienky používania</li>
         <li><SomeIcon />Ochrana osobných údajov</li>
         <li><TrashIcon /> Vymazanie dát GDPR</li>
-        <li><ExitIcon /> Odhlásenie</li>
+        <li @click="logout"><ExitIcon /> Odhlásenie</li>
       </ul>
     </div>
   </div>
@@ -26,6 +26,10 @@ definePageMeta({
   title: 'Registrace Miranda Demo Menu',
   layout: 'menu',
 })
+
+const logout = () => {
+  location.reload()
+}
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@
     <div class="carousel-slides-container">
       <div class="carousel-slides">
         <div v-for="(slide, index) in slidesToShow" :key="`slide-${currentPage}-${index}`" class="carousel-slide"   :style="{ '--slides-per-page': props.slidesPerPage }">
-          <img :src="'_nuxt/assets/img/' + slide.image" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
+          <img  :src="`_nuxt/assets/img/${slide.image}`" :alt="slide.title || `Sninek ${index + 1}`" class="carousel-image"/>
           <div v-if="slide.title" class="carousel-caption">{{ slide.title }}</div>
           <div v-if="slide.message" class="carousel-message">{{ slide.message }}</div>
         </div>
