@@ -93,7 +93,7 @@
       </div>
       <div class="section section-bg--accent mb-0">
         <h4 class="inverse">Pomozte nám</h4>
-        <button type="submit" class="btn btn--sm btn--action">
+        <button type="submit" class="btn btn--sm btn--action inverse">
           Darovať 2%
         </button>
       </div>
@@ -102,7 +102,7 @@
     <div class="section section-bg--accent mb-0">
       <div class="section-half">
         <h4 class="inverse">Staňte sa andělom strážným pre zvieratko</h4>
-        <button type="submit" class="btn btn--sm btn--action">
+        <button type="submit" class="btn btn--sm btn--action inverse">
           Virtuálna adopcia
         </button>
       </div>
@@ -175,5 +175,10 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+.btn.inverse {
+  background: #fff;
+  color: $accent;
 }
 </style>

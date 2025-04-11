@@ -42,7 +42,7 @@ definePageMeta({
   layout: "welcome"
 })
 
-const auth = useAuth()
+const { auth, login } = useAuth()
 const name = ref('');
 const password = ref('');
 const showPassword = ref(false)
@@ -61,7 +61,7 @@ const passwordShown = computed(() => {
 const validateAndPushToHP = () => {
   console.log(`Rekneme ze jmeno ${name.value} a heslo ${password.value} je spravne, jdeme na home page`);
   setTimeout(() => {
-    auth.value.isLoggedIn = true
+    login()
     useRouter().push('/')
   }, 1000)
 }

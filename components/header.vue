@@ -48,5 +48,6 @@ header {
   min-height: 32px;
   gap: .5rem;
   padding: 0 .5rem;
+  color: #794389
 }
 </style>

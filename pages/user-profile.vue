@@ -15,7 +15,7 @@
         <li><RulesIcon/> Podmienky používania</li>
         <li><SomeIcon />Ochrana osobných údajov</li>
         <li><TrashIcon /> Vymazanie dát GDPR</li>
-        <li @click="logout"><ExitIcon /> Odhlásenie</li>
+        <li @click="logoutUser"><ExitIcon /> Odhlásenie</li>
       </ul>
     </div>
   </div>
@@ -27,8 +27,10 @@ definePageMeta({
   layout: 'menu',
 })
 
-const logout = () => {
-  location.reload()
+const { logout } = useAuth()
+const logoutUser = () => {
+  logout()
+  useRouter().push('/intro/login')
 }
 </script>
 

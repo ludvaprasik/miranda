@@ -1,5 +1,8 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-    const auth = useAuth()
+    if (process.env) return
+    const { auth, checkLocalStorage } = useAuth()
+    checkLocalStorage()
+
     const isPublicIntro = to.path.startsWith('/intro')
     const loggedIn = auth.value?.isLoggedIn
 
