@@ -22,7 +22,7 @@
         <DogoCard v-for="dog in doggoList" :key="dog.name" :dog="dog" />
       </div>
 
-      <button class="btn btn--action">Viac tuláčikov</button>
+      <button class="btn btn--action" @click="$router.push('/wanderers')">Viac tuláčikov</button>
     </div>
 
   </div>
